@@ -10,9 +10,9 @@
 		FA6FE8591EBB29D500B5112C /* ExampleFrameworkNoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FE84F1EBB29D500B5112C /* ExampleFrameworkNoTests.framework */; };
 		FA6FE85E1EBB29D500B5112C /* ExampleFrameworkNoTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6FE85D1EBB29D500B5112C /* ExampleFrameworkNoTestsTests.swift */; };
 		FA6FE8601EBB29D500B5112C /* ExampleFrameworkNoTests.h in Headers */ = {isa = PBXBuildFile; fileRef = FA6FE8521EBB29D500B5112C /* ExampleFrameworkNoTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FA6FE86B1EBB2DED00B5112C /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FE86A1EBB2DED00B5112C /* Curry.framework */; };
-		FA6FE86D1EBB2E0E00B5112C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FE86C1EBB2E0E00B5112C /* Nimble.framework */; };
-		FA6FE86F1EBB2E1500B5112C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FE86E1EBB2E1500B5112C /* Quick.framework */; };
+		FA6FE8711EBB2FD100B5112C /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FE8701EBB2FD100B5112C /* Curry.framework */; };
+		FA6FE8731EBB304000B5112C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FE8721EBB304000B5112C /* Nimble.framework */; };
+		FA6FE8751EBB304300B5112C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FE8741EBB304300B5112C /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,9 @@
 		FA6FE86A1EBB2DED00B5112C /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = "Carthage/Checkouts/Curry/build/Debug-iphoneos/Curry.framework"; sourceTree = "<group>"; };
 		FA6FE86C1EBB2E0E00B5112C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		FA6FE86E1EBB2E1500B5112C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
+		FA6FE8701EBB2FD100B5112C /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
+		FA6FE8721EBB304000B5112C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		FA6FE8741EBB304300B5112C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6FE86B1EBB2DED00B5112C /* Curry.framework in Frameworks */,
+				FA6FE8711EBB2FD100B5112C /* Curry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,8 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6FE86F1EBB2E1500B5112C /* Quick.framework in Frameworks */,
-				FA6FE86D1EBB2E0E00B5112C /* Nimble.framework in Frameworks */,
+				FA6FE8751EBB304300B5112C /* Quick.framework in Frameworks */,
+				FA6FE8731EBB304000B5112C /* Nimble.framework in Frameworks */,
 				FA6FE8591EBB29D500B5112C /* ExampleFrameworkNoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +102,9 @@
 		FA6FE8691EBB2DED00B5112C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA6FE8741EBB304300B5112C /* Quick.framework */,
+				FA6FE8721EBB304000B5112C /* Nimble.framework */,
+				FA6FE8701EBB2FD100B5112C /* Curry.framework */,
 				FA6FE86E1EBB2E1500B5112C /* Quick.framework */,
 				FA6FE86C1EBB2E0E00B5112C /* Nimble.framework */,
 				FA6FE86A1EBB2DED00B5112C /* Curry.framework */,
@@ -350,6 +356,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ExampleFrameworkNoTests/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
@@ -370,6 +380,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ExampleFrameworkNoTests/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
@@ -385,6 +399,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 4GKC8CC3YD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ExampleFrameworkNoTestsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.myluckyday.test.ExampleFrameworkNoTestsTests;
@@ -397,6 +415,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 4GKC8CC3YD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ExampleFrameworkNoTestsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.myluckyday.test.ExampleFrameworkNoTestsTests;
